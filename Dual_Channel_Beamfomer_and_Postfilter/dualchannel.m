@@ -165,7 +165,7 @@ for n = 1:Nframe
                     if omega(n,k) <= omegalow
                         phi(n,k) = 0;
                     else
-                        if omegalow < omega(n,k) <= omegahigh      % OMEGA_HIGH(k)       % replace omegahigh with OMEGA_HIGH(k)
+                        if omegalow < omega(n,k) && omega(n,k) <= omegahigh      % OMEGA_HIGH(k)       % replace omegahigh with OMEGA_HIGH(k)
                             phi(n,k) = (omega(n,k) - omegalow) / (omegahigh - omegalow);
 %                         if omegalow < omega(n,k) <= OMEGA_HIGH(k)     % OMEGA_HIGH(k)       % replace omegahigh with OMEGA_HIGH(k)
 %                             phi(n,k) = (omega(n,k) - omegalow) / (OMEGA_HIGH(k) - omegalow);
